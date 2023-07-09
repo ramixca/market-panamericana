@@ -7,6 +7,8 @@ $white: rgb(255, 255, 255);
 $hover: rgb(229, 6, 149);
 $aqua: rgb(30, 202, 211); 
 
+$pink: rgb(214, 0, 132);
+
 
 
 $theme-colors: (
@@ -15,7 +17,8 @@ $theme-colors: (
     "mustard": $mustard,
     "white": $white,
     "hover": $hover,
-    "aqua": $aqua
+    "aqua": $aqua,
+    "pink": $pink
 );
 
 
@@ -187,4 +190,18 @@ $theme-colors: map-merge($theme-colors, $custom-color);
 
 .location-section {
   background: $aqua;
+}
+
+//////////////////////////////////////////////////
+///CONTACT US SECTION
+/// //////////////////////////////////////////////
+
+.contact-section {
+  background: $pink;
+}
+
+.social-wrapper {
+  color: $white;
+  background: $primary;
+  border-radius: 64px 0 0 64px;
 }

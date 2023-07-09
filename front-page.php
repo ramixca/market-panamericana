@@ -90,7 +90,7 @@ get_header();
 	<section class="container-fluid location-section">
 		<div class="row align-items-center d-flex text-center">
 			<div class="col-lg-6">
-				<h2 class="location-title pt-2 pb-2 mx-auto"><?php echo esc_html('Our hours & location'); ?></h2>
+				<h2 class="location-title pt-2 pb-2 mt-4 d-inline-block rounded mx-auto"><?php echo esc_html('Our hours & location'); ?></h2>
 				<?php the_field('location'); ?>
 			</div>
 
@@ -103,6 +103,38 @@ get_header();
 						<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
 					</div>
 				<?php endif; ?>
+			</div>
+		</div>
+
+
+
+	</section>
+
+	<section class="container-fluid contact-section">
+		<div class="row">
+			<div class="col-lg-6">
+					<?php echo do_shortcode('[contact-form-7 id="56" title="CONTACT US"]');?>
+					<h2>test</h2>
+			</div>
+
+
+			<div class="col-lg-6 p-0">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/img/follow-us.png'); ?>" class="img-fluid " alt="...">
+
+				<div class="social-wrapper p-4 mb-4 rounded-left">
+					<i class="bi bi-instagram rounded-circle" style="font-size: 24px"></i>
+					<a href="<?php echo esc_url( 'https://www.instagram.com/tiendapanamericanayeg/' ); ?>" target="_blank" class="text-decoration-none social-link">
+						<?php echo esc_html( '@tiendapanamericanaYEG' ); ?>
+					</a>
+				</div>
+
+				<div class="social-wrapper p-4 mb-4">
+					<i class="bi bi-instagram rounded-circle" style="font-size: 24px"></i>
+					<a href="<?php echo esc_url( 'https://www.instagram.com/tiendapanamericanayeg/' ); ?>" target="_blank" class="text-decoration-none social-link">
+						<?php echo esc_html( '@tiendapanamericanaYEG' ); ?>
+					</a>
+				</div>
+
 			</div>
 		</div>
 
