@@ -1,0 +1,190 @@
+// Include custom variables default overrides here
+
+$primary: rgb(0, 0, 0);
+$gray: #E6E6E6;
+$mustard: rgb(255, 221, 0);
+$white: rgb(255, 255, 255);
+$hover: rgb(229, 6, 149);
+$aqua: rgb(30, 202, 211); 
+
+
+
+$theme-colors: (
+    "primary": $primary,
+    "gray": $gray,
+    "mustard": $mustard,
+    "white": $white,
+    "hover": $hover,
+    "aqua": $aqua
+);
+
+
+$custom-color: (
+    "icon-background": rgba(147, 213, 0.2)
+);
+
+
+
+$theme-colors: map-merge($theme-colors, $custom-color);
+
+@import "./bootstrap/scss/bootstrap";
+
+
+
+
+
+/************** HEADER **************/
+.announcement-bar {
+    background: var(--bs-primary);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--bs-gray);
+  
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: inline-flex;
+      margin: 0 -10px;
+  
+      li {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+  
+        .bi {
+          background-color: var(--bs-icon-background);
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          margin-right: 6px;
+        }
+
+        a {
+            color: var(--bs-white);
+        }
+
+        a:hover {
+            color: var(--bs-hover);
+        }
+
+        // a:visited {
+        //   color: var(--bs-mustard);
+        // }
+
+
+  
+      }
+    }
+  
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  
+  }
+  
+  
+  .site-header {
+    .aws-search-field {
+      font-size: 0.9rem;
+      padding-left: 1.4rem;
+      border-radius: 20px!important;
+    }
+  }
+  
+  /*MAIN MENU*/
+
+  .main-navigation {
+    font-weight: 600;
+
+    .current-menu-item {
+        background-color: rgb(208, 183, 22);
+    }
+
+    a {
+        color: var(--bs-primary);
+        padding: 1rem 1.5rem;
+    }
+
+    a:hover {
+        background-color: rgb(208, 183, 22);
+    }
+
+    color: var(--bs-primary);
+
+    .menu-toggle {
+        background-color: $mustard;
+        color: $black;
+        border: none;
+      }
+  }
+
+  /*FRONT-PAGE*/
+
+  .carousel {
+    .carousel-control-prev, .carousel-control-next {
+        width:10%;
+    }
+  }
+
+  .search-section {
+    .aws-search-field {
+      font-size: 0.9rem;
+      padding-left: 1.4rem;
+      border-radius: 20px!important;
+    }
+  }
+
+  .about-section {
+    background: var(--bs-primary);
+
+    .about-title {
+      color: var(--bs-icon-background);
+
+    }
+    .about-text {
+      color: var(--bs-white);
+    }
+  }
+
+
+  .btn-primary:hover {
+    background: var(--bs-hover)
+    /* Add any additional styles you want for the hover state */
+  }
+  
+
+  /* FOOTER */
+
+  .site-footer {
+    background-color: var(--bs-primary);
+    color: rgb(255, 255, 255)
+  }
+
+
+  // LOCATION SECTION
+
+  .acf-map {
+    width: 100%;
+    height: 400px;
+    border: #ccc solid 1px;
+    // margin: 20px 0;
+}
+
+// Fixes potential theme css conflict.
+.acf-map img {
+   max-width: inherit !important;
+}
+
+//////////////////////////////////////////////////
+.location-title {
+  text-transform: uppercase;
+  color: $white;
+  background: $primary;
+  padding: 20px;
+}
+
+.location-section {
+  background: $aqua;
+}
