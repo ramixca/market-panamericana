@@ -26,7 +26,6 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'panamericana'); ?></a>
-
 		<div class="announcement-bar pt-2 pb-2">
 			<div class="container">
 				<div class="row">
@@ -51,23 +50,7 @@
 		</div>
 
 
-
-
-
 		<header id="masthead" class="site-header">
-
-			<!-- <div class="container pt-2 pb-2">
-
-				<div class="col site-header__logo d-flex justify-content-center justify-content-md-start">
-					php the_custom_logo(); 
-				</div>
-
-				<div class="col-sm-12 col-md-5">
-					php aws_get_search_form(true); 
-				</div>
-
-			</div> -->
-
 			<div class="site-branding">
 				<?php
 
@@ -89,17 +72,17 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation bg-mustard">
-				<div class="container d-flex justify-content-center">
-					<div class="row">
-						<div class="col-12 d-flex justify-content-center">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-								<div class="bi bi-list"></div>
-
-								<?php esc_html_e('Primary Menu', 'panamericana'); ?>
-							</button>
-						</div>
-
-						<div class="col-12 text-center">
+				<div class="container d-flex justify-content-between">
+				<?php the_custom_logo(); ?>
+					<div class="row align-items-center justify-content-center">
+						<!-- <div class="col-lg-4">							
+						</div> -->
+						<div class="col-lg-8 text-center">
+							<div class="d-flex justify-content-center align-self-center">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+									<div class="bi bi-list" style="font-size: 24px"></div>
+								</button>
+							</div>
 							<?php
 							wp_nav_menu(
 								array(

@@ -12181,4 +12181,8 @@ textarea.form-control-lg {
   right: 0;
   cursor: pointer;
   transition: all ease 0.3s;
+}
+
+.menu ul {
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

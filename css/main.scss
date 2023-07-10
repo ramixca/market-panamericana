@@ -246,22 +246,6 @@ input[type="submit"] {
 }
 
 
-// .scroll-top {
-// 	background: transparent;
-// 	border: none;
-//   border-radius: inherit;
-// 	padding: 1rem;
-// 	position: fixed;
-// 	bottom: 0;
-// 	right: 0;
-// 	cursor: pointer;
-// 	transition: all ease 0.3s;
-// 	opacity: 0;
-//   stroke: $primary;
-//   background-color: $mustard;
-// }
-
-
 .scroll-top {
 	background: transparent;
 	border: none;
@@ -271,4 +255,8 @@ input[type="submit"] {
 	right: 0;
 	cursor: pointer;
 	transition: all ease 0.3s;  
+}
+
+.menu ul {
+  align-items: center;
 }
