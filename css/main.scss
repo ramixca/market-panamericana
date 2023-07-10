@@ -204,4 +204,40 @@ $theme-colors: map-merge($theme-colors, $custom-color);
   color: $white;
   background: $primary;
   border-radius: 64px 0 0 64px;
+  width: 75%;
+
+
+  a {
+    color: var(--bs-white);
+}
+
+a:hover {
+    color: var(--bs-hover);
+}
+}
+
+//////////////////////////////////////////////////
+///CONTACT FORM 7
+/// //////////////////////////////////////////////
+
+.wpcf7 {
+
+  width: 50%;
+
+  
+h3 {
+  text-transform: uppercase;
+  color: $white;
+
+}
+
+input[type="submit"] {
+  background: $primary;
+  color: $white;
+  border: none;
+  text-transform: uppercase;
+  padding: 20px;
+
+
+}
 }

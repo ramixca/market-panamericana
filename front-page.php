@@ -111,29 +111,31 @@ get_header();
 	</section>
 
 	<section class="container-fluid contact-section">
-		<div class="row">
-			<div class="col-lg-6">
-					<?php echo do_shortcode('[contact-form-7 id="56" title="CONTACT US"]');?>
-					<h2>test</h2>
+		<div class="row pt-2 pb-2">
+			<div class="col-lg-6 d-flex align-items-center justify-content-center">				
+				<?php echo do_shortcode('[contact-form-7 id="56" title="CONTACT US"]');?>				
 			</div>
 
 
-			<div class="col-lg-6 p-0">
+			<div class="col-lg-6 p-0 d-flex flex-column align-items-end">
 				<img src="<?php echo esc_url(get_template_directory_uri() . '/img/follow-us.png'); ?>" class="img-fluid " alt="...">
 
-				<div class="social-wrapper p-4 mb-4 rounded-left">
+
+				<div class="social-wrapper p-4 mb-4 rounded-left d-flex align-items-center gap-2">
+					<i class="bi bi-facebook rounded-circle" style="font-size: 24px"></i>
+					<a href="<?php echo esc_url( 'https://www.facebook.com/TiendaPanamericanaEdmonton' ); ?>" target="_blank" class="text-decoration-none test">
+						<?php echo esc_html( 'Tienda Panamericana Edmonton' ); ?>
+					</a>
+				</div>
+
+
+				<div class="social-wrapper p-4 mb-4 rounded-left d-flex align-items-center gap-2">
 					<i class="bi bi-instagram rounded-circle" style="font-size: 24px"></i>
 					<a href="<?php echo esc_url( 'https://www.instagram.com/tiendapanamericanayeg/' ); ?>" target="_blank" class="text-decoration-none social-link">
 						<?php echo esc_html( '@tiendapanamericanaYEG' ); ?>
 					</a>
 				</div>
 
-				<div class="social-wrapper p-4 mb-4">
-					<i class="bi bi-instagram rounded-circle" style="font-size: 24px"></i>
-					<a href="<?php echo esc_url( 'https://www.instagram.com/tiendapanamericanayeg/' ); ?>" target="_blank" class="text-decoration-none social-link">
-						<?php echo esc_html( '@tiendapanamericanaYEG' ); ?>
-					</a>
-				</div>
 
 			</div>
 		</div>
