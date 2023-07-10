@@ -154,6 +154,9 @@ function market_scripts() {
 	wp_enqueue_script('market-location', "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWK3S_OHvujNDuILguxSMUtg9zO76Lg9s&callback=Function.prototype", array(), _S_VERSION, true);
 	wp_enqueue_script('market-location-map', get_template_directory_uri() . '/js/location.js', array('market-location', 'jquery'), _S_VERSION, true);
 
+	// wp_enqueue_style('market-scroll', get_stylesheet_directory_uri() .'/css/scroll.css', array());
+	// wp_enqueue_script('market-scroll-top', get_template_directory_uri() .'/js/scroll-top.js', array());
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

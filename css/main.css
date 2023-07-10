@@ -12165,4 +12165,17 @@ textarea.form-control-lg {
   border: none;
   text-transform: uppercase;
   padding: 20px;
+}
+
+.scroll-top {
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  opacity: 0;
+  color: #267c51;
 }/*# sourceMappingURL=main.css.map */
