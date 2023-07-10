@@ -32,7 +32,10 @@ $theme-colors: map-merge($theme-colors, $custom-color);
 
 @import "./bootstrap/scss/bootstrap";
 
-
+.post,
+.page {
+	margin: 0;
+}
 
 
 
@@ -243,6 +246,22 @@ input[type="submit"] {
 }
 
 
+// .scroll-top {
+// 	background: transparent;
+// 	border: none;
+//   border-radius: inherit;
+// 	padding: 1rem;
+// 	position: fixed;
+// 	bottom: 0;
+// 	right: 0;
+// 	cursor: pointer;
+// 	transition: all ease 0.3s;
+// 	opacity: 0;
+//   stroke: $primary;
+//   background-color: $mustard;
+// }
+
+
 .scroll-top {
 	background: transparent;
 	border: none;
@@ -251,7 +270,5 @@ input[type="submit"] {
 	bottom: 0;
 	right: 0;
 	cursor: pointer;
-	transition: all ease 0.3s;
-	opacity: 0;
-	color: #267c51;
+	transition: all ease 0.3s;  
 }
