@@ -27,7 +27,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'panamericana'); ?></a>
 		<div class="announcement-bar pt-2 pb-2">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 d-flex justify-content-end">
 						<ul class="announcement-bar__list">
@@ -50,7 +50,7 @@
 		</div>
 
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header bg-mustard d-flex p-2">
 			<div class="site-branding">
 				<?php
 
@@ -71,28 +71,31 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
+
+			<?php the_custom_logo(); ?>
+
 			<nav id="site-navigation" class="main-navigation bg-mustard">
-				<div class="container d-flex justify-content-between">
-				<?php the_custom_logo(); ?>
-					<div class="row align-items-center justify-content-center">
-						<!-- <div class="col-lg-4">							
-						</div> -->
-						<div class="col-lg-8 text-center">
-							<div class="d-flex justify-content-center align-self-center">
-								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-									<div class="bi bi-list" style="font-size: 24px"></div>
-								</button>
-							</div>
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-1',
-									'menu_id'        => 'primary-menu',
-								)
-							);
-							?>
-						</div>
-					</div>
-				</div>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+    <div class="container d-flex justify-content-end align-items-center flex-wrap">
+        <div class="d-flex align-items-center">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+
+        <div class="text-center mt-3 mt-md-0">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'primary-menu'
+                )
+            );
+            ?>
+        </div>
+    </div>
+</nav>
+
+
+
+
+	</header><!-- #masthead -->

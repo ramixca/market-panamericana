@@ -12061,6 +12061,14 @@ textarea.form-control-lg {
   }
 }
 
+.menu a:hover {
+  color: rgb(229, 6, 149);
+}
+
+.menu ul {
+  align-items: center;
+}
+
 .site-header .aws-search-field {
   font-size: 0.9rem;
   padding-left: 1.4rem;
@@ -12079,15 +12087,30 @@ textarea.form-control-lg {
   color: var(--bs-primary);
   padding: 1rem 1.5rem;
 }
-.main-navigation a:hover {
-  background-color: rgb(208, 183, 22);
-}
 .main-navigation .menu-toggle {
   background-color: rgb(255, 221, 0);
   color: #000;
   border: none;
 }
 
+/* Media query for tablet to desktop view */
+@media (min-width: 768px) {
+  #site-navigation .container {
+    max-width: 960px;
+  }
+}
+/* Media query for mobile view */
+@media (max-width: 767px) {
+  #site-navigation .container {
+    flex-direction: column;
+  }
+  #site-navigation .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
 /*FRONT-PAGE*/
 .carousel .carousel-control-prev, .carousel .carousel-control-next {
   width: 10%;
@@ -12181,8 +12204,4 @@ textarea.form-control-lg {
   right: 0;
   cursor: pointer;
   transition: all ease 0.3s;
-}
-
-.menu ul {
-  align-items: center;
 }/*# sourceMappingURL=main.css.map */

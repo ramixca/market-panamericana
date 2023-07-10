@@ -51,6 +51,8 @@ $theme-colors: map-merge($theme-colors, $custom-color);
       list-style-type: none;
       display: inline-flex;
       margin: 0 -10px;
+
+      
   
       li {
         margin: 0 10px;
@@ -89,6 +91,17 @@ $theme-colors: map-merge($theme-colors, $custom-color);
     }
   
   }
+
+
+  .menu {
+    a:hover {
+      color: $hover;
+    }
+  }
+  
+  .menu ul {
+    align-items: center;
+  }
   
   
   .site-header {
@@ -113,9 +126,9 @@ $theme-colors: map-merge($theme-colors, $custom-color);
         padding: 1rem 1.5rem;
     }
 
-    a:hover {
-        background-color: rgb(208, 183, 22);
-    }
+    // a:hover {
+    //     background-color: rgb(208, 183, 22);
+    // }
 
     color: var(--bs-primary);
 
@@ -124,7 +137,53 @@ $theme-colors: map-merge($theme-colors, $custom-color);
         color: $black;
         border: none;
       }
+
+      // @include media-breakpoint-down(sm) {
+      //   width: auto;
+      //   position: relative;
+      //   top: 0;
+      //   align-self: center;
+      //   margin-left: auto;
+
+      //   .nav-menu ul,
+      //   .nav-menu.toggled ul {
+      //     display: flex;
+      //     justify-content: center;
+      //   }
+
+      //   .nav-menu ul ul a {
+      //     left: -999em;
+      //     top: 0;
+      //     width: 200px;
+      //     text-align: left;
+      //   }
+      // }
+
+
   }
+
+
+
+  /* Media query for tablet to desktop view */
+  @media (min-width: 768px) {
+    #site-navigation .container {
+        max-width: 960px;
+    }
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+    #site-navigation .container {
+        flex-direction: column;
+    }
+
+    #site-navigation .col-12 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
 
   /*FRONT-PAGE*/
 
@@ -245,6 +304,9 @@ input[type="submit"] {
 }
 }
 
+//////////////////////////////////////////////////
+///SCROLL TO TOP BUTTON
+/// //////////////////////////////////////////////
 
 .scroll-top {
 	background: transparent;
@@ -257,6 +319,4 @@ input[type="submit"] {
 	transition: all ease 0.3s;  
 }
 
-.menu ul {
-  align-items: center;
-}
+
