@@ -228,3 +228,48 @@ function my_acf_init()
 	acf_update_setting('google_api_key', 'AIzaSyDWK3S_OHvujNDuILguxSMUtg9zO76Lg9s');
 }
 add_action('acf/init', 'my_acf_init');
+
+
+//WOOCOMMERCE SUPPORT
+// function mytheme_add_woocommerce_support() {
+// 	add_theme_support( 'woocommerce', array(
+// 		'thumbnail_image_width' => 150,
+// 		'single_image_width'    => 300,
+
+//         'product_grid'          => array(
+//             'default_rows'    => 3,
+//             'min_rows'        => 2,
+//             'max_rows'        => 8,
+//             'default_columns' => 4,
+//             'min_columns'     => 2,
+//             'max_columns'     => 5,
+//         ),
+// 	) );
+// }
+// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
+
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
+//Remove sidebar from all pages
+remove_action(
+	'woocommerce_sidebar',
+	'woocommerce_get_sidebar',
+	10
+);
+
+//Remove breadcrumbs from pages. Used custom breadcrumb
+remove_action(
+	'woocommerce_before_main_content',
+	'woocommerce_breadcrumb',
+	20
+);
+
+
+//Remove H2 Description tab from single-product page
+add_filter( 'woocommerce_product_description_heading', '__return_null' );
