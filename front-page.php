@@ -25,13 +25,13 @@ get_header();
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-bs-interval="10000">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?> /img/slider/inside.jpg" class="d-block w-100" alt="..."></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/slider/inside.jpg" class="d-block w-100" alt="..."></a>
 					<div class="carousel-caption d-none d-md-block">
 					</div>
 				</div>
 
 				<div class="carousel-item" data-bs-interval="2000">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?> /img/slider/tienda.jpg" class="d-block w-100" alt="..."></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/slider/tienda.jpg" class="d-block w-100" alt="..."></a>
 					<div class="carousel-caption d-none d-md-block">
 					</div>
 				</div>
@@ -91,13 +91,13 @@ get_header();
 		<div class="row align-items-center d-flex text-center">
 			<div class="col-lg-6">
 				<h2 class="location-title pt-2 pb-2 mt-4 d-inline-block rounded mx-auto"><?php echo esc_html('Our hours & location'); ?></h2>
-				<?php the_field('location'); ?>
+				<?php the_field('schedule'); ?>
 			</div>
 
 
 			<div class="col-lg-6 p-0">
 				<?php
-				$location = get_field('map');
+				$location = get_field('location_map');
 				if ($location) : ?>
 					<div class="acf-map w-100" data-zoom="16">
 						<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
@@ -109,11 +109,15 @@ get_header();
 
 
 	</section>
+<!-- [contact-form-7 id="5" title="contact"] macos
+	[contact-form-7 id="56" title="CONTACT US"] PC
 
+
+-->
 	<section class="container-fluid contact-section">
 		<div class="row pt-2 pb-2">
 			<div class="col-lg-6 d-flex align-items-center justify-content-center">				
-				<?php echo do_shortcode('[contact-form-7 id="56" title="CONTACT US"]');?>				
+				<?php echo do_shortcode('[contact-form-7 id="5" title="contact"]');?>				
 			</div>
 
 
