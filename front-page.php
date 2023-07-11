@@ -53,7 +53,7 @@ get_header();
 			<div class="row align-items-center d-flex">
 				<div class="col-lg-6">
 					<h1 class="about-title pt-2 pb-2"><?php echo esc_html('Tienda Panamericana'); ?></h1>
-					<p class="about-text h-25 d-inline-block text-center w-75"><?php echo esc_html('We are a Latin Store in Edmonton. We offer the best Latin Products, foods, and some services such as sending money internationally.'); ?></p>
+					<p class="about-text h-25 d-inline-block text-left w-75"><?php echo esc_html('We are a Latin Store in Edmonton. We offer the best Latin Products, foods, and some services such as sending money internationally.'); ?></p>
 				</div>
 				<div class="col-lg-6 p-0">
 					<img src="<?php echo esc_url(get_template_directory_uri() . '/img/slider/tienda.jpg'); ?>" class="img-fluid w-600" alt="...">
@@ -76,7 +76,7 @@ get_header();
 	</section>
 
 
-	<section class="container popular-products mb-5">
+	<section class="container popular-products mb-4 p-4">
 		<div class="pt-5">
 			<?php echo do_shortcode('[products columns=4 limit=8]'); ?>
 		</div>
@@ -109,15 +109,15 @@ get_header();
 
 
 	</section>
-<!-- [contact-form-7 id="5" title="contact"] macos
+	<!-- [contact-form-7 id="5" title="contact"] macos
 	[contact-form-7 id="56" title="CONTACT US"] PC
 
 
 -->
 	<section class="container-fluid contact-section">
 		<div class="row pt-2 pb-2">
-			<div class="col-lg-6 d-flex align-items-center justify-content-center">				
-				<?php echo do_shortcode('[contact-form-7 id="5" title="contact"]');?>				
+			<div class="col-lg-6 d-flex align-items-center justify-content-center">
+				<?php echo do_shortcode('[contact-form-7 id="5" title="contact"]'); ?>
 			</div>
 
 
@@ -127,20 +127,18 @@ get_header();
 
 				<div class="social-wrapper p-4 mb-4 rounded-left d-flex align-items-center gap-2">
 					<i class="bi bi-facebook rounded-circle" style="font-size: 24px"></i>
-					<a href="<?php echo esc_url( 'https://www.facebook.com/TiendaPanamericanaEdmonton' ); ?>" target="_blank" class="text-decoration-none test">
-						<?php echo esc_html( 'Tienda Panamericana Edmonton' ); ?>
+					<a href="<?php echo esc_url('https://www.facebook.com/TiendaPanamericanaEdmonton'); ?>" target="_blank" class="text-decoration-none test">
+						<?php echo esc_html('Tienda Panamericana Edmonton'); ?>
 					</a>
 				</div>
 
 
 				<div class="social-wrapper p-4 mb-4 rounded-left d-flex align-items-center gap-2">
 					<i class="bi bi-instagram rounded-circle" style="font-size: 24px"></i>
-					<a href="<?php echo esc_url( 'https://www.instagram.com/tiendapanamericanayeg/' ); ?>" target="_blank" class="text-decoration-none social-link">
-						<?php echo esc_html( '@tiendapanamericanaYEG' ); ?>
+					<a href="<?php echo esc_url('https://www.instagram.com/tiendapanamericanayeg/'); ?>" target="_blank" class="text-decoration-none social-link">
+						<?php echo esc_html('@tiendapanamericanaYEG'); ?>
 					</a>
 				</div>
-
-
 			</div>
 		</div>
 

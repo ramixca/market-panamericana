@@ -217,6 +217,11 @@ $theme-colors: map-merge($theme-colors, $custom-color);
   .btn-primary:hover {
     background: var(--bs-hover)
     /* Add any additional styles you want for the hover state */
+
+  }
+
+  .btn-primary:visited {
+    color: $white;
   }
   
 
@@ -351,10 +356,6 @@ ul.products li.product {
   margin: 10px;
   padding: 0;
   position: relative;
-  width: 22.05%;
-  margin-left: 0
+  width: 22%;
 }
 
-.purchasable .wc-tabs {
-  display: none;
-}

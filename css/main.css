@@ -12136,6 +12136,10 @@ textarea.form-control-lg {
   background: var(--bs-hover);
 }
 
+.btn-primary:visited {
+  color: rgb(255, 255, 255);
+}
+
 /* FOOTER */
 .site-footer {
   background-color: var(--bs-primary);
@@ -12230,10 +12234,5 @@ ul.products li.product {
   margin: 10px;
   padding: 0;
   position: relative;
-  width: 22.05%;
-  margin-left: 0;
-}
-
-.purchasable .wc-tabs {
-  display: none;
+  width: 22%;
 }/*# sourceMappingURL=main.css.map */
