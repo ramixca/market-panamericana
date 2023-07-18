@@ -151,7 +151,7 @@ function market_scripts() {
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/script.js', array('jquery'));
 
 
-	wp_enqueue_script('market-location', "https://maps.googleapis.com/maps/api/js?key=AIzaSyDWK3S_OHvujNDuILguxSMUtg9zO76Lg9s&callback=Function.prototype", array(), _S_VERSION, true);
+	wp_enqueue_script('market-location', "https://maps.googleapis.com/maps/api/js?key=SECRET_API_KEY&callback=Function.prototype", array(), _S_VERSION, true);
 	wp_enqueue_script('market-location-map', get_template_directory_uri() . '/js/location.js', array('market-location', 'jquery'), _S_VERSION, true);
 
 	wp_enqueue_style('market-scroll', get_stylesheet_directory_uri() .'/css/scroll.css', array());
@@ -225,7 +225,7 @@ function wpdocs_remove_dashboard_widgets()
 /* Google API Key */
 function my_acf_init()
 {
-	acf_update_setting('google_api_key', 'AIzaSyDWK3S_OHvujNDuILguxSMUtg9zO76Lg9s');
+	acf_update_setting('google_api_key', 'SECRET_API_KEY');
 }
 add_action('acf/init', 'my_acf_init');
 
